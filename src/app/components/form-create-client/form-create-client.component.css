@@ -1,0 +1,23 @@
+.label {
+    display: flex;
+    flex-flow: column;
+    gap: 0.2rem;
+    width: 50%;
+}
+
+.title_label {
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.input_label {
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: solid 0.1rem transparent;
+}
+
+.input_label:focus {
+    border: solid 0.1rem rgb(99, 102, 241);
+}
