@@ -3,7 +3,7 @@
         <h3>Cadastro de clientes</h3>
         <span (click)="cancelCreated()" class="material-symbols-outlined">close</span>
     </header>
-    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="bg-slate-300 flex flex-col gap-4 px-8 pb-6 rounded-sm text-sm">
+    <form [formGroup]="clientCreateForm" (ngSubmit)="submit()" class="bg-slate-300 flex flex-col gap-4 px-8 pb-6 rounded-sm text-sm">
         <div class="flex gap-4">
             <label class="label" for="name">
                 <span class="title_label">*  Nome</span>
@@ -31,7 +31,7 @@
                 <span class="title_label">Telefone Fixo</span>
                 <input maxlength="9" placeholder="Telefone fixo" class="input_label" type="text" formControlName="fixed">
             </label>
-       </div>
+        </div>
         <div class="flex gap-4">
             <label class="label" for="state">
                 <span class="title_label">*  Estado</span>
@@ -100,7 +100,7 @@
         </div>
         <div class="flex gap-2 text-white mt-8">
             <button type="submit" class="bg-indigo-500 font-medium px-2 p-1 rounded-md m-auto">Cadastrar</button>
-            <button (click)="cancelCreated()" type="button" class="bg-red-400 font-medium px-2 p-1 rounded-md m-auto">Cancelar</button>
+            <!-- <button (click)="cancelCreated()" type="button" class="bg-red-400 font-medium px-2 p-1 rounded-md m-auto">Cancelar</button> -->
         </div>
     </form>
 </div>

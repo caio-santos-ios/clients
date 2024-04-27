@@ -1,22 +1,20 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
-import { ClientService } from '../../services/client.service';
-import { IClient } from '../../interfaces/client.interface';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { IPost } from '../../interfaces/post.interface';
 import { DialogService } from '../../services/dialog.service';
+import { ClientService } from '../../services/client.service';
 
 @Component({
-  selector: 'app-form-create-client',
+  selector: 'app-client-create',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
-  templateUrl: './form-create-client.component.html',
-  styleUrl: './form-create-client.component.css'
+  imports: [ReactiveFormsModule],
+  templateUrl: './client-create.component.html',
+  styleUrl: './client-create.component.css'
 })
-
-export class FormCreateClientComponent {
+export class ClientCreateComponent {
   constructor(private clientService: ClientService, private dialogService: DialogService) {}
 
-  registerForm = new FormGroup({
+  clientCreateForm = new FormGroup({
     name: new FormControl(""),
     lastName: new FormControl(""),
     email: new FormControl(""),
@@ -33,16 +31,14 @@ export class FormCreateClientComponent {
     document: new FormControl(""),
     observation: new FormControl("")
   });
-  
-  onSubmit(){
-    const data = this.registerForm.value as IClient
-    console.log(data)
-    this.registerForm.reset()
+
+  submit() {
+    const data = this.clientCreateForm.value as IPost;
+    this.clientService.create(data);
     this.dialogService.closeModalCreateClient();
-    // this.clientService.postClient(data)
   }
 
   cancelCreated() {
-    this.dialogService.closeModalCreateClient()
+    this.dialogService.closeModalCreateClient();
   }
 }

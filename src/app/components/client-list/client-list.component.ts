@@ -1,23 +1,32 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ClientService } from '../../services/client.service';
+import { DialogService } from '../../services/dialog.service';
 
 @Component({
   selector: 'app-client-list',
   standalone: true,
   imports: [CommonModule],
-  providers: [ClientService],
   templateUrl: './client-list.component.html',
   styleUrl: './client-list.component.css'
 })
 export class ClientListComponent {
-  constructor(private clientService: ClientService) {}
+  constructor(private clientService: ClientService, private dialogService: DialogService) {}
 
   get clientList() {
-    return this.clientService.getAllClients();
+    return this.clientService.getClient()
+  }
+  
+  createClient() {
+    this.dialogService.openModalCreateClient();
+    
   }
 
-  async deleteClient(e: Event | any) {
-    
+  cancelClient() {
+    this.dialogService.closeModalCreateClient();
+  }
+
+  deleteClient(id: any) {
+    console.log(id)
   }
 }

@@ -1,18 +1,23 @@
-import { Injectable, signal } from "@angular/core";
-import { IClient } from "../interfaces/client.interface";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { IPost } from '../interfaces/post.interface';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({
+  providedIn: 'root'
+})
 export class ClientRequest {
-    private url: string = 'http://localhost:5018/api/v1/clients';
+  readonly BASE_URL = "http://localhost:5018/api/v1/clients";
 
-    constructor( private http: HttpClient  ) {}
+  constructor(private http: HttpClient) { }
 
-    getAllClient() {
-        return this.http.get<IClient[]>(this.url)
-    }
+  create(client: any) {
+    return this.http.post(`${this.BASE_URL}`, client)
+  }
 
-    getLatestClient() {
-        return this.http.get<IClient[]>(`${this.url}/latest`)
-    }
+  getClients() {
+    return this.http.get(`${this.BASE_URL}`)
+  }
+
+  update() {}
+  delete() {}
 }

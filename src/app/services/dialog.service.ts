@@ -1,13 +1,13 @@
 import { Injectable } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
-import { FormCreateClientComponent } from "../components/form-create-client/form-create-client.component";
+import { ClientCreateComponent } from "../components/client-create/client-create.component";
 
 @Injectable({ providedIn: 'root' })
 export class DialogService {
     constructor(private dialog: MatDialog) {}
 
     openModalCreateClient() {
-        this.dialog.open(FormCreateClientComponent, {})
+        this.dialog.open(ClientCreateComponent, {})
     }
     
     closeModalCreateClient() {

@@ -1,26 +1,23 @@
-import { Injectable, signal } from "@angular/core";
-import { IClient } from "../interfaces/client.interface";
-import { ClientRequest } from "../api/client.request";
+import { Injectable, signal } from '@angular/core';
+import { ClientRequest } from '../api/client.request';
 
 @Injectable({ providedIn: 'root' })
 export class ClientService {
-    readonly clientList = signal<IClient[]>([]);
-    readonly clientListLatest = signal<IClient[]>([])
+  readonly clientList = signal<any[]>([])
+  
+  constructor(private clientRequest: ClientRequest) {
+    this.clientRequest.getClients().subscribe((data: any) => {
+      this.clientList.set(data);
+    })
+  }
 
-    constructor (private clientRequest: ClientRequest) {
-        this.clientRequest.getAllClient().subscribe((clients) => {
-            this.clientList.set(clients)
-        }),
-        this.clientRequest.getLatestClient().subscribe((clients) => {
-            this.clientListLatest.set(clients)
-        })
-    }
+  getClient() {
+    return this.clientList();
+  }
 
-    getAllClients() {
-        return this.clientList();
-    }
-
-    getLatest() {
-        return this.clientListLatest();
-    }
+  create(client: any) {
+    this.clientRequest.create(client).subscribe((data: any) => {
+      this.clientList.update((clients) => [...clients, data]);
+    });
+  }
 }

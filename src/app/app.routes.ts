@@ -3,7 +3,7 @@ import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.co
 import { ClientPageComponent } from './pages/client-page/client-page.component';
 
 export const routes: Routes = [
-    { path: "", component: DashboardPageComponent },
+    { path: "", component: ClientPageComponent },
     // { path: "vendas" }
     { path: "clientes", component: ClientPageComponent },
     // { path: "financeiro", component: ClientPageComponent },
