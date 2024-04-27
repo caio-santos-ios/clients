@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { ClientRequest } from '../../api/client.request';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogService } from '../../services/dialog.service';
+import { AsideComponent } from "../../components/aside/aside.component";
 
 @Component({
     selector: 'app-home',
@@ -14,7 +15,7 @@ import { DialogService } from '../../services/dialog.service';
     templateUrl: './home.component.html',
     providers: [ClientService, ClientRequest, DialogService],
     styleUrl: './home.component.css',
-    imports: [CommonModule, FormCreateClientComponent, HeaderComponent, ClientListComponent, MatDialogModule ]
+    imports: [CommonModule, FormCreateClientComponent, HeaderComponent, ClientListComponent, MatDialogModule, AsideComponent]
 })
 export class HomeComponent {
     constructor(private dialogService: DialogService) {}

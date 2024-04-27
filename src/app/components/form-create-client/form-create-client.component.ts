@@ -1,8 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
-import { foundationDateValidator } from './formValidator.directive';
-import { HttpClient } from '@angular/common/http';
+import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { ClientService } from '../../services/client.service';
 import { IClient } from '../../interfaces/client.interface';
 import { DialogService } from '../../services/dialog.service';
@@ -41,7 +39,7 @@ export class FormCreateClientComponent {
     console.log(data)
     this.registerForm.reset()
     this.dialogService.closeModalCreateClient();
-    this.clientService.postClient(data)
+    // this.clientService.postClient(data)
   }
 
   cancelCreated() {

@@ -1,5 +1,5 @@
-<ul class="bg-zinc-200 p-2 font-sans h-[35rem] overflow-x-auto">
-    <li class="flex gap-2 border-b-[0.1rem] border-blue-500 text-sm font-medium">
+<ul class="bg-slate-100 p-2 font-sans h-[35rem] overflow-x-auto w-[70rem]">
+    <li class="flex gap-2 border-b-[0.1rem] text-sm font-medium">
       <span class="w-3/12">Nome</span>
       <span class="w-3/12">Documento</span>
       <span class="w-3/12">Email</span>
@@ -8,13 +8,13 @@
       <span class="w-3/12">Cidade</span>
       <span class="w-[1.7rem]"></span>
     </li>
-    <li class="flex gap-2 font-light text-[0.8rem]" *ngFor="let client of clientList">
-      <span class="w-3/12">{{ client.name }}</span>
-      <span class="w-3/12">{{ client.document }}</span>
-      <span class="w-3/12">{{ client.email }}</span>
-      <span class="w-3/12">{{ client.cellPhone }}</span>
-      <span class="w-3/12">{{ client.state }}</span>
-      <span class="w-3/12">{{ client.city }}</span>
+    <li class="flex gap-2 font-light text-[0.8rem] border-b-[0.1rem]" *ngFor="let client of clientList">
+      <span class="w-3/12 border-r-[0.1rem]">{{ client.name }}</span>
+      <span class="w-3/12 border-r-[0.1rem]">{{ client.document }}</span>
+      <span class="w-3/12 border-r-[0.1rem]">{{ client.email }}</span>
+      <span class="w-3/12 border-r-[0.1rem]">{{ client.cellPhone }}</span>
+      <span class="w-3/12 border-r-[0.1rem]">{{ client.state }}</span>
+      <span class="w-3/12 border-r-[0.1rem]">{{ client.city }}</span>
       <span [id]="client.id" (click)="deleteClient($event)" class="material-symbols-outlined text-base">delete</span>
     </li>
 </ul>
