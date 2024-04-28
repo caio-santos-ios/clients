@@ -15,4 +15,6 @@ export interface IClient {
     reference?: string;
     isPeronFisic: boolean;
     observation?: string;
+    created_at?: string;
+    updated_at?: string;
 }

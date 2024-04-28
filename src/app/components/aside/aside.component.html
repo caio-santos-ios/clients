@@ -1,0 +1,32 @@
+<aside (mouseover)="openAside()" (mouseout)="closeAside()" class="bg-slate-100 w-20 h-dvh flex flex-col gap-12 py-12 px-2 hover:px-0 hover:w-40 duration-500">
+    <a href="/">    
+        <img class="h-8" src="http://www.gestaodinamica.com.br/assets/images/logo/logo-gd-svg.svg" alt="logo">
+    </a>
+    
+    <nav class="h-full flex flex-col gap-2">
+        <a class="link_aside flex justify-center gap-3 w-full hover:bg-zinc-200 border-transparent border-l-4 hover:border-indigo-500 p-2 duration-500" href="">
+            <span class="material-symbols-outlined text-center">dashboard</span>
+            <p class="hidden title_aside">Dashboard</p>
+        </a>
+        <a class="link_aside flex justify-center gap-3 w-full hover:bg-zinc-200 border-transparent border-l-4 hover:border-indigo-500 p-2 duration-500" href="/vendas">
+            <span class="material-symbols-outlined">sell</span>
+            <p class="hidden title_aside">Vendas</p>
+        </a>
+        <a class="link_aside flex justify-center gap-3 w-full hover:bg-zinc-200 border-transparent border-l-4 hover:border-indigo-500 p-2 duration-500" href="/clientes">
+            <span class="material-symbols-outlined">group</span>
+            <p class="hidden title_aside">Clientes</p>
+        </a>
+        <a class="link_aside flex justify-center gap-3 w-full hover:bg-zinc-200 border-transparent border-l-4 hover:border-indigo-500 p-2 duration-500" href="financeiro">
+            <span class="material-symbols-outlined">paid</span>
+            <p class="hidden title_aside">Financeiro</p>
+        </a>
+        <a class="link_aside flex justify-center gap-3 w-full hover:bg-zinc-200 border-transparent border-l-4 hover:border-indigo-500 p-2 duration-500" href="compras">
+            <span class="material-symbols-outlined">add_shopping_cart</span>
+            <p class="hidden title_aside">Compras</p>
+        </a>
+        <a class="link_aside flex justify-center gap-3 w-full hover:bg-zinc-200 border-transparent border-l-4 hover:border-indigo-500 p-2 duration-500" href="controladoria">
+            <span class="material-symbols-outlined">monitoring</span>
+            <p class="hidden title_aside">Controladoria</p>
+        </a> 
+    </nav>
+</aside>
