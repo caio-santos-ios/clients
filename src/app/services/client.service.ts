@@ -20,4 +20,10 @@ export class ClientService {
       this.clientList.update((clients) => [...clients, data]);
     });
   }
+
+  delete(id: string) {
+    this.clientRequest.delete(id).subscribe(() => {
+      this.clientList.update((clients) => clients.filter(client => client.id != id))
+    })
+  }
 }

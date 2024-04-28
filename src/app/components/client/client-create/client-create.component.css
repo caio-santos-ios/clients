@@ -21,3 +21,12 @@
 .input_label:focus {
     border: solid 0.1rem rgb(99, 102, 241);
 }
+
+#bg {
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: solid 0.1rem transparent;
+    background-color: white;
+    outline: none;
+}

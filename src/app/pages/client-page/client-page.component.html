@@ -1,15 +1,6 @@
 <main class="flex h-dvh">
     <app-aside></app-aside>
     <section class="w-[90dvw] h-[90dvh] m-auto flex flex-col gap-12">
-        <div class="bg-slate-100 w-full flex justify-between items-center py-4">
-            <label class="flex border border-sky-700 w-6/12 rounded-lg relative" for="search">
-              <input class="rounded-l-lg w-full px-2 text-sm outline-none placeholder:text-sm" type="text" name="search" id="search" placeholder="Pesquisar...">
-              <span class="material-symbols-outlined w-2/12 bg-sky-700 h-full text-lg text-center right-0 rounded-r-lg">search</span>
-            </label>
-            <button (click)="createPost()" type="button" class="bg-sky-700 flex justify-center items-center rounded-2xl p-2">
-                Cadastrar
-            </button>
-        </div>
         <app-client-list></app-client-list>
 
         <!-- <div class="flex w-full gap-12">        
@@ -25,13 +16,3 @@
         </div> -->
     </section>
 </main>
-
-
-<!--
-<main class="flex h-dvh">
-    <section class="w-[90dvw] h-[90dvh] m-auto flex flex-col gap-12">
-
-
-    </section>
-</main>
--->

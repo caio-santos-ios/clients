@@ -11,13 +11,16 @@ export class ClientRequest {
   constructor(private http: HttpClient) { }
 
   create(client: any) {
-    return this.http.post(`${this.BASE_URL}`, client)
+    return this.http.post(this.BASE_URL, client)
   }
 
   getClients() {
-    return this.http.get(`${this.BASE_URL}`)
+    return this.http.get(this.BASE_URL)
   }
-
+  
   update() {}
-  delete() {}
+  
+  delete(id: string) {
+    return this.http.delete(`${this.BASE_URL}/${id}`)
+  }
 }

@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ClientService } from '../../services/client.service';
-import { DialogService } from '../../services/dialog.service';
+import { ClientService } from '../../../services/client.service';
+import { DialogService } from '../../../services/dialog.service';
+import { ClientCreateComponent } from '../client-create/client-create.component';
 
 @Component({
   selector: 'app-client-list',
@@ -18,15 +19,22 @@ export class ClientListComponent {
   }
   
   createClient() {
-    this.dialogService.openModalCreateClient();
-    
+    this.dialogService.openModal(ClientCreateComponent);
   }
 
   cancelClient() {
-    this.dialogService.closeModalCreateClient();
+    this.dialogService.closeModal();
+  }
+
+  viewClient(id: any) {
+    console.log(id)
   }
 
   deleteClient(id: any) {
-    console.log(id)
+    const isDeleted = confirm("Dejesa deletar o cliente?")
+
+    if(!isDeleted) return this.dialogService.closeModal();
+    
+    this.clientService.delete(id.target.id)
   }
 }
