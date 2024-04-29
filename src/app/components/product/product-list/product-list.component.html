@@ -1,0 +1,23 @@
+<div style="border: 0.1rem solid rgb(209 213 219); border-radius: 0.5rem;" class="h-[30rem] bg-white p-4 rounded-lg">
+    <h1 class="text-center text-2xl font-semibold">Items</h1>
+    <ul class="bg-slate-200 flex flex-col gap-2 mb-8">
+        <li class="bg-slate-300 flex justify-between gap-4 p-2">
+            <span class="font-semibold w-2/12">Produto</span>
+            <span class="font-semibold w-2/12">Valor</span>
+            <span class="font-semibold w-4/12">Descrição</span>
+            <button class="px-4 w-[12rem]"></button>
+        </li>
+        <li class="bg-slate-300 flex gap-4 p-2 justify-between text-sm">
+            <span class="w-2/12">Monitor 4k</span>
+            <input disabled class="bg-transparent w-2/12 placeholder:text-black" [value]="780" type="text" [defaultValue]="10" placeholder="780,99">
+            <span class="w-4/12 text-sm">Monitor com alta qualidade.</span>
+            <button type="button" (click)="selectProduct($event)" id="1" class="bg-green-500 px-4 w-[12rem] duration-700 product">Adicionar aos pedidos</button>
+        </li>
+        <li class="bg-slate-300 flex gap-4 p-2 justify-between text-sm">
+            <span class="w-2/12">Teclado mecanico</span>
+            <input disabled class="bg-transparent w-2/12 placeholder:text-black" [value]="300.99" type="text" [defaultValue]="10" placeholder="300,99">
+            <span class="w-4/12">Otimo para trabalhar e jogar.</span>
+            <button type="button" (click)="selectProduct($event)" id="2" class="bg-green-500 px-4 w-[12rem] duration-700 product">Adicionar aos pedidos</button>
+        </li>
+    </ul>
+</div>

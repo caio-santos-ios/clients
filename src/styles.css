@@ -11,7 +11,7 @@
 }
 
 .section_default {
-  @apply bg-slate-100 w-[90dvw] h-[90dvh] m-auto p-8;
+  @apply bg-slate-200 w-[90dvw] h-[90dvh] m-auto p-8;
 }
 
 /* BOTÂO PARA CRIAÇÂO - GLOBAL */

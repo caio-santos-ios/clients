@@ -1,7 +1,19 @@
-<app-create-order></app-create-order>
-
-<ul>
-    <li>
-        <span></span>
+<ul style="background-color: white; width: 100%; height: 31rem; border: 0.1rem solid rgb(209 213 219); border-radius: 0.5rem;" class="d-flex flex-column gap-2 p-4">
+    <h1 class="fs-4 fw-mediun text-center">Pedidos criados</h1>
+    <li style="width: 100%;" class="flex justify-content-between p-2">
+        <span class="text-center" style="width: 16%;">Item</span>
+        <span class="text-center" style="width: 16%;">Cliente</span>
+        <span class="text-center" style="width: 16%;">M. Pagamento</span>
+        <span class="text-center" style="width: 16%;">Natureza</span>
+        <span class="text-center" style="width: 16%;">Quantidade</span>
+        <span class="text-center" style="width: 16%;">Valor total</span>
+    </li>
+    <li style="width: 100%; background-color: rgb(241 245 249); border-radius: 0.5rem;" class="flex justify-content-between p-2" *ngFor="let item of getOrdersCreated">
+        <span class="text-center" style="width: 16%;">{{ item.product }}</span>
+        <span class="text-center" style="width: 16%;">{{ item.client }}</span>
+        <span class="text-center" style="width: 16%;">{{ item.paymentForm }}</span>
+        <span class="text-center" style="width: 16%;">{{ item.nature }}</span>
+        <span class="text-center" style="width: 16%;">{{ item.quanty }}</span>
+        <span class="text-center" style="width: 16%;">R$ {{ item.amount }}</span>
     </li>
 </ul>
