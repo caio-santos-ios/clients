@@ -4,6 +4,12 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root'
 })
 export class OrdersService {
+  count = signal<number>(0);
+
+  addCount(value: number) {
+    return this.count.update((count: number) => count + value)
+  }
+
   // LISTA DE PRODUTOS
   readonly listProducts = signal<any>([
     { id: 1, name: "Produto 1", price: 780.99 },
@@ -29,8 +35,7 @@ export class OrdersService {
     this.ordersCreated.update((ordersCreated) => [...ordersCreated,  ...ordersOpen])
   }
 
-  product(product: any) {
-    console.log(product)
-    this.selectedProduct.update((value) => [...value, product]);
+  selectProduct(product: any) {
+    this.selectedProduct.set(product);
   }
 }

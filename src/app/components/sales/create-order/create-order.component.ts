@@ -13,7 +13,6 @@ import { OrderListComponent } from "../order-list/order-list.component";
     standalone: true,
     templateUrl: './create-order.component.html',
     styleUrl: './create-order.component.css',
-    providers: [OrdersService],
     imports: [ReactiveFormsModule, CommonModule, FormsModule, InputMaskModule, ProductListComponent, OrderListComponent]
 })
 export class CreateOrderComponent {
@@ -22,14 +21,7 @@ export class CreateOrderComponent {
     { id: 2, name: "Produto 2", price: 300.99 },
   ])
 
-  constructor(private orderService: OrdersService) {
-    effect(() => {
-      const product: any = this.orderService.selectedProduct();
-      console.log(product)
-      // this.orderCreateForm.value.unitaryValue = product.price;
-      // this.orderCreateForm.value.product = product.name;
-    })
-  }
+  constructor(private orderService: OrdersService) {}
  
   orderCreateForm = new FormGroup({
     createdAt: new FormControl(""),
@@ -48,13 +40,11 @@ export class CreateOrderComponent {
   }
 
   sumAmount(event: any) {
-    const quanty = Number(event.target.value);
-    const value = Number(this.orderCreateForm.value.unitaryValue); 
-   
-    // MULTIPLICA O PREÇO DO ITEM PELA QUANTIDADE ESCOLHIDA E FORMATA PARA A MOEDA REAL.
-    const result = (value * quanty).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
-    
-    this.orderCreateForm.value.amount = result;
+    const value = Number(event.target.value); 
+
+    const result = this.orderCreateForm.value.quanty * value; 
+       
+    this.orderCreateForm.value.amount = String(result);
   }
 
   includeOrder() {

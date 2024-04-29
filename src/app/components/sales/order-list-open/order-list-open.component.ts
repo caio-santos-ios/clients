@@ -17,9 +17,9 @@ export class OrderListOpenComponent {
   }
 
   finishOrder() {
-      const orders = this.orderService.ordersOpen();
+    const orders = this.orderService.ordersOpen();
 
-      this.orderService.createOrder(orders);
-      this.orderService.ordersOpen.update((value: any) => [])
+    this.orderService.createOrder(orders);
+    this.orderService.ordersOpen.update((value: any) => [])
   }
 }
