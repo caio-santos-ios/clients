@@ -18,8 +18,6 @@ export class ClientCreateComponent {
 
   readonly address = signal<any>('');
 
-  readonly teste: boolean = true;
-
   clientCreateForm = new FormGroup({
     name: new FormControl(""),
     lastName: new FormControl(""),
@@ -62,7 +60,11 @@ export class ClientCreateComponent {
     if(myZipCode.length === 8) {
       try {
         this.http.get(`https://viacep.com.br/ws/${myZipCode}/json/`).subscribe((data: any) => {
-          this.address.set(data)
+          if(data.erro) {
+            return
+          }
+
+          this.address.set(data);
         })
       } catch (error) {
         console.log(error)

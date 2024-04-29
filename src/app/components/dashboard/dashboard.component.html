@@ -1,1 +1,27 @@
-<p>dashboard works!</p>
+<div class="flex flex-wrap gap-8 h-full w-full">
+    <div class="flex w-full justify-between h-[48%]">
+        <div class="bg-white w-[66%]">
+            <p-chart height="100%" type="bar" [data]="{ labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'], datasets: [{ label: 'Vendas do ano', data: [10, 15, 55, 180, 168, 200, 1681, 15, 198, 222, 635, 55] }] }" [options]="{ scales: { y: { beginAtZero: true }}}"></p-chart>
+        </div>
+        <div class="bg-white w-[32%]">
+            <p-chart height="100%" type="polarArea" [data]="{ labels: ['Cartão', 'Dinheiro', 'Boleto'], datasets: [{ label: 'Metodos de pagamentos', data: [70, 18, 12], backgroundColor: [
+                'rgb(255, 99, 132)',
+            'rgb(75, 192, 192)',
+            'rgb(255, 205, 86)',
+            'rgb(201, 203, 207)',
+            'rgb(54, 162, 235)'
+        ] }] }"></p-chart>
+        </div>
+    </div>
+    <div class="flex w-full justify-between h-[48.5%]">
+        <div class="bg-white w-[32%]">
+            <p-chart height="100%" type="line" [data]="{ labels: ['Semana 1', 'Semana 2', 'Semana 3', 'Semana 4'], datasets: [{ label: 'Vendas no mês', data: [15, 80, 60, 150] }] }" [options]="options"></p-chart>
+        </div>
+        <div class="bg-white w-[32%]">
+            <p-chart height="100%" type="doughnut" [data]="{ labels: ['Valor1', 'Valor2'], datasets: [ { label: 'Media de valor', data: [40, 60] } ] }"></p-chart>
+        </div>
+        <div class="bg-white w-[32%]">
+            <p-chart height="100%" type="radar" [data]="{ labels: ['Valor1', 'Valor2', 'Valor3', 'Valor4'], datasets: [{ label: 'Valores 1', data: [33, 33, 33, 33], fill: true }, { label: 'Valores 2', data: [35, 15, 30, 20], fill: true }] }" [options]="{ elements: { line: { borderWidth: 3 } } }"></p-chart>
+        </div>
+    </div>
+</div>

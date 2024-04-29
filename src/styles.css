@@ -1,16 +1,28 @@
-@tailwind base; 
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+:root {
+  --primary-color: rgb(30, 89, 143);
+}
 
-/* Estilo dos icones - google fonts */
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24;
-  cursor: pointer;
+.main_default {
+  @apply flex h-dvh;
+}
+
+.section_default {
+  @apply bg-slate-100 w-[90dvw] h-[90dvh] m-auto p-8;
+}
+
+/* BOTÂO PARA CRIAÇÂO - GLOBAL */
+.btn_create {
+  background-color: var(--primary-color);
+  border: 0.1rem solid var(--primary-color);
+}
+
+.btn_create:hover {
+  border: 0.1rem solid var(--primary-color);
+  background-color: white;
+  color: var(--primary-color);
+  transition: 1s;
 }
