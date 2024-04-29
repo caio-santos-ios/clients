@@ -1,12 +1,14 @@
 import { Injectable, signal } from '@angular/core';
-import { ClientRequest } from '../api/client.request';
+import { HttpClient } from '@angular/common/http';
+import { IClient } from '../interfaces/client.interface';
 
 @Injectable({ providedIn: 'root' })
 export class ClientService {
-  readonly clientList = signal<any[]>([])
+  readonly clientList = signal<any>([])
+  readonly BASE_URL = "http://localhost:5018/api/v1/clients";
   
-  constructor(private clientRequest: ClientRequest) {
-    this.clientRequest.getClients().subscribe((data: any) => {
+  constructor(private http: HttpClient) {
+    this.http.get(this.BASE_URL).subscribe((data: any) => {
       this.clientList.set(data);
     })
   }
@@ -15,15 +17,19 @@ export class ClientService {
     return this.clientList();
   }
 
-  create(client: any) {
-    this.clientRequest.create(client).subscribe((data: any) => {
-      this.clientList.update((clients) => [...clients, data]);
-    });
+  getByClient(id: string) {
+    return this.clientList().filter((client: any) => client.id == id) 
   }
 
-  delete(id: string) {
-    this.clientRequest.delete(id).subscribe(() => {
-      this.clientList.update((clients) => clients.filter(client => client.id != id))
+  async create(client: any) {
+    this.http.post(`${this.BASE_URL}`, client).subscribe((clientData: any) => {
+      this.clientList.update((clients: any) => [...clients, clientData]);
+    })
+  }
+
+  async delete(id: string) {
+    this.http.delete(`${this.BASE_URL}/${id}`).subscribe(_ => {
+      this.clientList.update((clients) => clients.filter((client: IClient) => client.id != id))
     })
   }
 }
