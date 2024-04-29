@@ -19,6 +19,6 @@ export class ProductListComponent {
   selectProduct(event: any) {
     const id = event.target.id;
     const product = this.orderService.listProducts().find((el: any) => el.id == id);
-    this.orderService.product(product)
+    this.orderService.selectProduct(product)
   }
 }

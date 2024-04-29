@@ -15,5 +15,5 @@ export class OrderListComponent {
     
     get getOrdersCreated() {
         return this.orderService.ordersCreated();  
-    }   
+    }
 }
