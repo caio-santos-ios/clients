@@ -43,12 +43,13 @@ export class CreateOrderComponent {
     const value = Number(event.target.value); 
 
     const result = this.orderCreateForm.value.quanty * value; 
-       
+    this.orderCreateForm.value.unitaryValue = String(value);
     this.orderCreateForm.value.amount = String(result);
   }
 
   includeOrder() {
     const data = this.orderCreateForm.value as IOrder;
+
     this.orderService.addProductOrdersOpen(data);
   }
 }

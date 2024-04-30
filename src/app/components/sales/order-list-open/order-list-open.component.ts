@@ -17,9 +17,25 @@ export class OrderListOpenComponent {
   }
 
   finishOrder() {
+    let myQuanty: number = 0;
+    let value: number = 0;
     const orders = this.orderService.ordersOpen();
+    orders.map((el: any) => {
+      let quanty = Number(el.quanty);
+      myQuanty = quanty + myQuanty;
+      let amount = Number(el.amount);
+      value = value + amount 
+    })
 
-    this.orderService.createOrder(orders);
+    const newData = {
+      client: orders[0].client,
+      amount: value,
+      quanty: myQuanty,
+      paymentForm: orders[0].paymentForm,
+      nature: orders[0].nature
+    }
+
+    this.orderService.createOrder(newData);
     this.orderService.ordersOpen.update((value: any) => [])
   }
 }

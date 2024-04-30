@@ -6,8 +6,8 @@
         <span class="text-center" style="width: 16%;">Quantidade</span>
         <span class="text-center" style="width: 16%;">Valor total</span>
     </li>
-    <div style="height: 70%;" class="flex flex-col justify-content-between overflow-y-auto">
-        <li style="width: 100%; background-color: rgb(241 245 249); border-radius: 0.5rem;" class="flex justify-content-between p-2" *ngFor="let item of getOrdersOpen">
+    <div style="height: 22rem;" class="flex flex-col gap-2 overflow-y-auto">
+        <li class="bg-slate-100 flex justify-between" *ngFor="let item of getOrdersOpen">
             <span class="text-center" style="width: 16%;">{{ item.product }}</span>
             <span class="text-center" style="width: 16%;">{{ item.client }}</span>
             <span class="text-center" style="width: 16%;">R$ {{ item.unitaryValue }}</span>
@@ -15,6 +15,10 @@
             <span class="text-center" style="width: 16%;">R$ {{ item.amount }}</span>
         </li>
     </div>
+    <!-- <div style="height: 70%;" class="flex flex-col justify-content-between overflow-y-auto">
+        <li style="width: 100%; background-color: rgb(241 245 249); border-radius: 0.5rem;" class="flex justify-content-between p-2" *ngFor="let item of getOrdersOpen">
+        </li>
+    </div> -->
     <div style="width: 100%;" class="d-flex justify-content-around absolute bottom-4">
         <button (click)="finishOrder()" style="background-color: rgba(18, 248, 2, 0.585); color: black; border-radius: 0.5rem;" class="p-3 fs-6 fw-medium" type="submit">Salvar pedido</button>
     </div>

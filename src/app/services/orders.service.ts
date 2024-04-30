@@ -31,8 +31,8 @@ export class OrdersService {
   }
 
   // cria o pedido com a lista de pedidos
-  createOrder(ordersOpen: []) {
-    this.ordersCreated.update((ordersCreated) => [...ordersCreated,  ...ordersOpen])
+  createOrder(orderOpen: any) {
+    this.ordersCreated.update((ordersCreated) => [...ordersCreated,  orderOpen])
   }
 
   selectProduct(product: any) {

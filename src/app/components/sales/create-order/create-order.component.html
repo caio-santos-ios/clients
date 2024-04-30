@@ -30,23 +30,23 @@
     <div class="p-2 border-t border-slate-300">
         <h1 class="text-center text-2xl font-semibold py-2">Items</h1>
         <div style="width: 100%;" class="d-flex gap-4 mb-3">
-            <label style="width: 50%;" for="quanty">
+            <label style="width: 50%;" for="delivaryDate">
+                <span>* Data da entrega</span>
+                <input formControlName="deliveryDate" class="form-control" type="date" id="delivaryDate">
+            </label>
+            <label style="width: 50%;" for="product">
                 <span>* Produto</span>
                 <input formControlName="product" class="form-control" type="text" placeholder="Produto">
             </label>
+        </div>
+        <div style="width: 100%;" class="d-flex gap-4 mb-3">
             <label style="width: 50%;" for="quanty">
                 <span>* Quantidade</span>
                 <input formControlName="quanty" class="form-control" type="text" placeholder="Quantidade">
             </label>
-        </div>
-        <div style="width: 100%;" class="d-flex gap-4 mb-3">
             <label style="width: 50%;" for="unitaryValue">
                 <span>* Valor unitário</span>
                 <input (keyup)="sumAmount($event)" class="form-control" type="text" placeholder="R$">
-            </label>
-            <label style="width: 50%;" for="delivaryDate">
-                <span>* Data da entrega</span>
-                <input formControlName="deliveryDate" class="form-control" type="date">
             </label>
         </div>
     </div>
