@@ -6,6 +6,10 @@ import { SalesPageComponent } from './pages/sales-page/sales-page.component';
 import { FinancialPageComponent } from './pages/financial-page/financial-page.component';
 import { ShoppingPageComponent } from './pages/shopping-page/shopping-page.component';
 import { ControllershipPageComponent } from './pages/controllership-page/controllership-page.component';
+import { ProductPageComponent } from './pages/product-page/product-page.component';
+import { ProductListPageComponent } from './pages/product-page/product-list-page/product-list-page.component';
+import { ProductTablePageComponent } from './pages/product-page/product-table-page/product-table-page.component';
+import { ProductCreatePageComponent } from './pages/product-page/product-create-page/product-create-page.component';
 
 export const routes: Routes = [
     { path: "", component: DashboardPageComponent },
@@ -15,4 +19,8 @@ export const routes: Routes = [
     { path: "financeiro", component: FinancialPageComponent },
     { path: "compras", component: ShoppingPageComponent },
     { path: "controladoria", component: ControllershipPageComponent },
+    { path: "produtos", component: ProductPageComponent },
+    { path: "cadastrar-produtos", component: ProductCreatePageComponent },
+    { path: "tabela-produtos", component: ProductTablePageComponent },
+    { path: "lista-produtos", component: ProductListPageComponent }
 ];

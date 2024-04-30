@@ -7,7 +7,7 @@
 }
 
 .main_default {
-  @apply flex h-dvh;
+  @apply flex h-dvh bg-gray-400;
 }
 
 .section_default {

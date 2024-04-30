@@ -18,4 +18,12 @@ export class AsideComponent {
     document.querySelectorAll(".title_aside").forEach(title => title.classList.add('hidden'))
     document.querySelectorAll(".link_aside").forEach(title => title.classList.add('justify-center'))
   }
+
+  openMenu() {
+    document.querySelectorAll(".menu_link").forEach(menu => menu.classList.remove('hidden'))
+  }
+
+  closeMenu() {
+    document.querySelectorAll(".menu_link").forEach(menu => menu.classList.add('hidden'))
+  }
 }

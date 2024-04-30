@@ -1,0 +1,57 @@
+<main class="main_default">
+    <app-aside></app-aside>
+    <section class="flex flex-col w-dvw h-screen">
+        <header class="bg-white w-full h-20 flex items-center">
+            <a class="ml-20" href="/">    
+                <img class="h-8" src="http://www.gestaodinamica.com.br/assets/images/logo/logo-gd-svg.svg" alt="logo">
+            </a>        
+        </header>
+        <div class="w-[90dvw] h-[90dvh] m-auto bg-white rounded-xl">
+            <div class="p-4 flex justify-between items-center bg-slate-400 border-[0.1rem] border-white rounded-t-lg">
+                <h1 class="text-2xl font-semibold">Tabela de Produtos</h1>
+                <form class="flex gap-8">
+                    <label class="flex flex-col gap-1 border-[0.1rem] p-2 w-[13rem]" for="group">
+                        <span class="w-full text-center font-medium mb-1">Grupo</span>
+                        <select class="rounded-lg p-1" name="group" id="group">
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Fenimino</option>
+                        </select>
+                    </label>
+                    <label class="flex flex-col gap-1 border-[0.1rem] p-2 w-[13rem]" for="category">
+                        <span class="w-full text-center font-medium mb-1">Categorias</span>
+                        <select class="rounded-lg p-1" name="category" id="category">
+                            <option value="camisa">Camisa</option>
+                            <option value="calca">Calça</option>
+                            <option value="tenis">Tenis</option>
+                        </select>
+                    </label>
+
+                    <label class="flex flex-col gap-1 border-[0.1rem] p-2" for="value">
+                        <span class="w-full text-center font-medium mb-1">Preço</span>
+                        <div class="flex gap-2">
+                            <div class="flex gap-2">
+                                <span>De: </span>
+                                <input class="rounded-lg p-1 max-w-24" type="text" name="valu" id="value" placeholder="R$ 0">
+                            </div>
+                            <div class="flex gap-1">
+                                <span>Até: </span>
+                                <input class="rounded-lg p-1 max-w-24" type="text" name="valu" id="value" placeholder="R$ 0">
+                            </div>
+                        </div>
+                    </label>
+                    
+                    <label class="flex flex-col gap-1 border-[0.1rem] p-2 w-[13rem]" for="brand">
+                        <span class="w-full text-center font-medium mb-1">Marca</span>
+                        <select class="rounded-lg p-1" name="brand" id="brand">
+                            <option value="nike">Nike</option>
+                            <option value="adidas">Adidas</option>
+                            <option value="puma">Puma</option>
+                        </select>
+                    </label>
+                </form>
+                <button class="p-3 font-semibold text-xl text-white bg-indigo-500 rounded-lg">Aplicar filtro</button>
+            </div>
+            <app-product-table></app-product-table>
+        </div>
+    </section>
+</main>
