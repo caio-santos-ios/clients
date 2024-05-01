@@ -1,0 +1,48 @@
+.filter {
+    display: flex;
+    background-color: white;
+    border-radius: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    height: 6rem;
+}
+
+.title_header_filter {
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding-left: 1rem;
+    color: var(--primary-color);
+}
+
+.container_filter {
+    display: flex;
+    width: 60%;
+    gap: 1rem;
+}
+
+.label_select {
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    color: var(--primary-color);
+}
+
+.select {
+    border: 0.1rem solid var(--primary-color);
+    border-radius: 1rem;
+    padding: 0.3rem;
+}
+
+.btn_filter {
+    background-color: var(--primary-color);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    padding: 0 2rem;
+    color: white;
+    height: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+}

@@ -1,42 +1,88 @@
-<aside (mouseover)="openAside()" (mouseout)="closeAside()" class="bg-white w-20 h-dvh flex flex-col gap-12 hover:px-0 hover:w-52 duration-500">
-   
-    <nav class="h-full flex flex-col mt-20">
-        <a class="link_aside flex justify-center gap-3 w-full hover:bg-slate-400 border-transparent border-r-4 hover:border-indigo-500 p-2 duration-500" href="">
-            <span class="material-symbols-outlined text-center">dashboard</span>
-            <p class="hidden title_aside">Dashboard</p>
+<aside class="aside">
+    <nav class="nav">
+        <a class="link" href="">
+            <div class="container_link">
+                <span class="icon_aside material-symbols-outlined">dashboard</span>
+                <p class="title_aside">Dashboard</p>
+            </div>
+            <ul class="menu">
+                <a class="option_menu" href="">Cadastrar</a>
+                <a class="option_menu" href="">Listar</a>
+                <a class="option_menu" href="">Atualizar</a>
+            </ul>
         </a>
-        <a class="link_aside flex justify-center gap-3 w-full hover:bg-slate-400 border-transparent border-r-4 hover:border-indigo-500 p-2 duration-500" href="/vendas">
-            <span class="material-symbols-outlined">sell</span>
-            <p class="hidden title_aside">Vendas</p>
+        
+        <a class="link" href="">
+            <div class="container_link">
+                <span class="material-symbols-outlined">sell</span>
+                <p class="hidden title_aside">Vendas</p>
+            </div>
+            <ul class="menu">
+                <a class="option_menu" href="">Cadastrar</a>
+                <a class="option_menu" href="">Listar</a>
+                <a class="option_menu" href="">Atualizar</a>
+            </ul>
         </a>
-        <a class="link_aside flex justify-center gap-3 w-full hover:bg-slate-400 border-transparent border-r-4 hover:border-indigo-500 p-2 duration-500" href="/clientes">
-            <span class="material-symbols-outlined">group</span>
-            <p class="hidden title_aside">Clientes</p>
+
+        <a class="link" href="">
+            <div class="container_link">
+                <span class="material-symbols-outlined">group</span>
+                <p class="hidden title_aside">Clientes</p>
+            </div>
+            <ul class="menu">
+                <a class="option_menu" href="clientes">Lista de Clientes</a>
+                <a class="option_menu" href="">Listar</a>
+                <a class="option_menu" href="">Atualizar</a>
+            </ul>
         </a>
-        <a class="link_aside flex justify-center gap-3 w-full hover:bg-slate-400 border-transparent border-r-4 hover:border-indigo-500 p-2 duration-500" href="financeiro">
-            <span class="material-symbols-outlined">paid</span>
-            <p class="hidden title_aside">Financeiro</p>
+        
+        <a class="link" href="">
+            <div class="container_link">
+                <span class="material-symbols-outlined">paid</span>
+                <p class="hidden title_aside">Financeiro</p>
+            </div>
+            <ul class="menu">
+                <a class="option_menu" href="">Cadastrar</a>
+                <a class="option_menu" href="">Listar</a>
+                <a class="option_menu" href="">Atualizar</a>
+            </ul>
         </a>
-        <a class="link_aside flex justify-center gap-3 w-full hover:bg-slate-400 border-transparent border-r-4 hover:border-indigo-500 p-2 duration-500" href="compras">
-            <span class="material-symbols-outlined">add_shopping_cart</span>
-            <p class="hidden title_aside">Compras</p>
+        
+        <a class="link" href="">
+            <div class="container_link">
+                <span class="material-symbols-outlined">add_shopping_cart</span>
+                <p class="hidden title_aside">Compras</p>
+            </div>
+            <ul class="menu">
+                <a class="option_menu" href="">Cadastrar</a>
+                <a class="option_menu" href="">Listar</a>
+                <a class="option_menu" href="">Atualizar</a>
+            </ul>
         </a>
-        <a class="link_aside flex justify-center gap-3 w-full hover:bg-slate-400 border-transparent border-r-4 hover:border-indigo-500 p-2 duration-500" href="controladoria">
-            <span class="material-symbols-outlined">monitoring</span>
-            <p class="hidden title_aside">Controladoria</p>
-        </a> 
-        <a (mouseleave)="closeMenu()" (mousemove)="openMenu()" class="flex flex-col gap-1 w-full hover:bg-white border-transparent border-r-4 hover:border-indigo-500 p-2 duration-500 h-10 hover:h-32" href="produtos">
-            <div class="link_aside flex justify-center gap-3 w-full">
+        
+        <a class="link" href="">
+            <div class="container_link">
+                <span class="material-symbols-outlined">monitoring</span>
+                <p class="hidden title_aside">Controladoria</p>
+            </div>
+            <ul class="menu">
+                <a class="option_menu" href="">Cadastrar</a>
+                <a class="option_menu" href="">Listar</a>
+                <a class="option_menu" href="">Atualizar</a>
+            </ul>
+        </a>
+       
+        <a class="link" href="">
+            <div class="container_link">
                 <span class="material-symbols-outlined">inventory</span>
                 <p class="hidden title_aside">Produtos</p>
             </div>
-            <ul class="menu_link hidden text-sm">
-                <div class="flex flex-col items-center text-md">
-                    <a class="hover:bg-indigo-500 duration-700 w-full p-1 hover:text-white" href="cadastrar-produtos">Cadastrar produto</a>
-                    <a class="hover:bg-indigo-500 duration-700 w-full p-1 hover:text-white" href="tabela-produtos">Tabela de produtos</a>
-                    <a class="hover:bg-indigo-500 duration-700 w-full p-1 hover:text-white" href="lista-produtos">Lista de produtos</a>
-                </div>
+            <ul class="menu">
+                <a class="option_menu" href="cadastrar-produtos">Cadastrar produto</a>
+                <a class="option_menu" href="tabela-produtos">Tabela de Produtos</a>
+                <a class="option_menu" href="lista-produtos">Lista de Produtos</a>
             </ul>
-        </a> 
+        </a>
+
     </nav>
-</aside>
+</aside> 
