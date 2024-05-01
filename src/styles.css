@@ -2,28 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
+li {
+  list-style: none;
+}
+
 :root {
   --primary-color: rgb(30, 89, 143);
+  --bg-section: rgb(126, 126, 128);;
 }
 
 .main_default {
-  @apply flex h-dvh bg-gray-400;
+  background-color: var(--bg-section);
+  display: flex;
+  min-height: 100dvh;
 }
 
 .section_default {
-  @apply bg-slate-200 w-[90dvw] h-[90dvh] m-auto p-8;
+  width: 100%;
+}
+
+.container_default {
+  width: 85%;
+  height: 85%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* HEADER */
+.header_default {
+  background-color: white;
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav_default {
+  width: 80%;
 }
 
 /* BOTÂO PARA CRIAÇÂO - GLOBAL */
 .btn_create {
   background-color: var(--primary-color);
   border: 0.1rem solid var(--primary-color);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
 }
 
 .btn_create:hover {
   border: 0.1rem solid var(--primary-color);
-  background-color: white;
-  color: var(--primary-color);
+  background-color: transparent;
   transition: 1s;
+  color: var(--primary-color);
 }
-/*  */

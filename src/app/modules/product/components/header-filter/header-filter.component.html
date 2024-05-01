@@ -1,0 +1,31 @@
+<form class="filter">
+    <h1 class="title_header_filter">{{ title }}</h1>
+    <div class="container_filter">
+        <label class="label_select" for="group">
+            <span class="w-full text-center font-medium mb-1">Grupo</span>
+            <select class="select" name="group" id="group">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Fenimino</option>
+            </select>
+        </label>
+        
+        <label class="label_select" for="category">
+            <span class="w-full text-center font-medium mb-1">Categorias</span>
+            <select class="select" name="category" id="category">
+                <option value="camisa">Camisa</option>
+                <option value="calca">Calça</option>
+                <option value="tenis">Tenis</option>
+            </select>
+        </label>
+        
+        <label class="label_select" for="brand">
+            <span class="w-full text-center font-medium mb-1">Marca</span>
+            <select class="select" name="brand" id="brand">
+                <option value="nike">Nike</option>
+                <option value="adidas">Adidas</option>
+                <option value="puma">Puma</option>
+            </select>
+        </label>
+    </div>
+    <button type="button" class="btn_filter">Aplicar filtro</button>
+</form>

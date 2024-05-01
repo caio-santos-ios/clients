@@ -1,0 +1,109 @@
+<!-- <div class="w-dvw max-w-3xl">
+    <header class="h-12 flex justify-around items-center">
+        <h3 class="text-xl">Cadastro de cliente</h3>
+        <span class="material-symbols-outlined">close</span>
+    </header>
+    <form [formGroup]="clientCreateForm" (ngSubmit)="saveUpdated()" class="bg-slate-300 flex flex-col gap-4 px-8 pb-6 rounded-sm text-sm">
+        <div class="flex gap-4">
+            <label class="label" for="name">
+                <span class="title_label">*  Nome</span>
+                <input required placeholder="Nome" class="input_label" type="text" formControlName="name">
+            </label>
+            <label class="label" for="lastName">
+                <span class="title_label">*  Sobrenome</span>
+                <input placeholder="Sobrenome" class="input_label" type="text" formControlName="lastName">
+            </label>
+            <label class="label" for="email">
+                <span class="title_label">*  Email</span>
+                <input placeholder="Email" class="input_label" type="text" formControlName="email">
+            </label>
+        </div>
+        
+        <div class="flex gap-4">
+            <label class="label" for="document">
+                <span class="title_label">*  Documento</span>
+                <p-inputMask id="bg" mask="999.999.999.99" formControlName="document" placeholder="Documento"></p-inputMask>
+            </label>
+            <label class="label" for="cellPhone">
+                <span class="title_label">*  Celular</span>
+                <p-inputMask id="bg" mask="(99) 99999-9999" formControlName="cellPhone" placeholder="Celular"></p-inputMask>
+            </label>
+            <label class="label" for="fixed">
+                <span class="title_label">Telefone Fixo</span>
+                <p-inputMask id="bg" mask="(99) 9999-9999" formControlName="fixed" placeholder="Telefone fixo"></p-inputMask>
+            </label>
+        </div>
+
+        <label class="label min-w-full" for="reference">
+            <span class="title_label">Referência</span>
+            <input placeholder="Referencia" class="input_label" type="text" formControlName="reference" name="reference" id="reference">
+        </label>
+
+        <div class="flex gap-4">
+            <label class="label" for="isPersonFisic">
+                <span class="title_label">*  Pessoa fisica</span>
+                <div class="flex gap-2">
+                    <span class="flex flex-col w-10 text-center">
+                        Sim
+                        <input name="isPersonFisic" [value]="true" type="radio">
+                    </span>
+                    <span class="flex flex-col w-10 text-center">
+                        Não
+                        <input name="isPersonFisic" [value]="false" type="radio">
+                    </span>
+                </div>
+            </label>
+            <label class="label" for="observation">
+                <span class="title_label">Observações</span>
+                <textarea class="p-2 outline-none" name="observation" id="observation" cols="30" rows="5" formControlName="observation"></textarea>
+            </label>
+        </div>
+        <div class="flex gap-2 text-white mt-8">
+            <button type="submit" class="btn_create font-medium px-2 p-1 rounded-md m-auto">Cadastrar</button>
+            <button type="button" class="bg-red-400 font-medium px-2 p-1 rounded-md m-auto">Cancelar</button>
+        </div>
+    </form>
+</div>
+
+
+<!-- <div class="w-dvw max-w-3xl">
+    <header class="h-12 flex justify-around items-center">
+        <h3 class="text-xl">Atualição do cliente</h3>
+        <span class="material-symbols-outlined">close</span>
+    </header>
+    <form [formGoup]="clientCreateForm" (ngSubmit)="saveUpdated()" class="bg-slate-300 flex flex-col gap-4 px-8 pb-6 rounded-sm text-sm">
+        <div class="flex gap-4">
+            <label class="label" for="name">
+                <span class="title_label">Nome</span>
+                <input *ngFor="let client of clientList" [value]="client.name" placeholder="Nome" class="input_label" type="text" formControlName="name">
+            </label>
+            <label class="label" for="name">
+                <span class="title_label">Email</span>
+                <input *ngFor="let client of clientList" [value]="client.email" placeholder="Email" class="input_label" type="text" formControlName="email">
+            </label>
+        </div>
+        
+        <div class="flex gap-4">
+            <label class="label" for="document">
+                <span class="title_label">*  Documento</span>
+                <p-inputMask id="bg" mask="999.999.999.99" formControlName="document" placeholder="Documento"></p-inputMask>
+            </label>
+        </div>
+        
+        <div class="flex gap-4">
+            <label class="label" for="state">
+                <span class="title_label">*  Estado</span>
+                <input disabled class="input_label" type="text" formControlName="state" name="state" id="state" placeholder="Estado">
+            </label>
+        </div>
+
+        <label class="label min-w-full" for="reference">
+            <span class="title_label">Referência</span>
+            <input placeholder="Referencia" class="input_label" type="text" formControlName="reference" name="reference" id="reference">
+        </label>
+        <div class="flex gap-2 text-white mt-8">
+            <button type="submit" class="btn_create font-medium px-2 p-1 rounded-md m-auto">Salvar</button>
+            <button (click)="saveUpdated()" type="button" class="bg-red-400 font-medium px-2 p-1 rounded-md m-auto">Cancelar</button>
+        </div>
+    </form>
+</div> --> -->

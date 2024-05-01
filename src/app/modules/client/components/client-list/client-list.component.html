@@ -1,0 +1,33 @@
+<div class="h-full w-full flex flex-col gap-3 bg-white rounded-xl">
+  <li class="flex items-center gap-2 p-2 bg-[var(--primary-color)] text-white rounded-t-xl">
+    <span class="w-3/12">Nome</span>
+    <span class="w-3/12">Documento</span>
+    <span class="w-3/12">Email</span>
+    <span class="w-3/12">Celular</span>
+    <span class="w-3/12 ">Estado</span>
+    <span class="w-3/12">Cidade</span>
+    <button (click)="createClient()" class="btn_create btn_new_client text-slate-100 p-2 rounded-lg transition delay-150 ease-in-out" type="button">
+      Novo
+      <span class="material-symbols-outlined">add</span>
+    </button>
+  </li>
+  <ul class=" flex flex-col gap-4 overflow-x-auto px-2">
+    <li class="flex items-center gap-2 p-2 rounded-xl" *ngFor="let client of clientList">
+      <span class="w-3/12">{{ client.name }}</span>
+      <span class="w-3/12">{{ client.document }}</span>
+      <span class="w-3/12">{{ client.email }}</span>
+      <span class="w-3/12">{{ client.cellPhone }}</span>
+      <span class="w-3/12 pl-8">{{ client.state }}</span>
+      <span class="w-3/12">{{ client.city }}</span>
+      <button type="button" [id]="client.id" (click)="viewClient($event)">
+        <span class="material-symbols-outlined text-2xl">visibility</span>
+      </button>
+      <button type="button">
+        <span [id]="client.id" (click)="deleteClient($event)" class="material-symbols-outlined text-2xl h-full w-full">delete</span>
+      </button>
+      <button type="button">
+        <span [id]="client.id" (click)="updateClient($event)" class="material-symbols-outlined">edit</span>
+      </button>
+    </li>
+  </ul>
+</div>

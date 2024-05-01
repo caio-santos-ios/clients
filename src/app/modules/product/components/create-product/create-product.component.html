@@ -1,0 +1,75 @@
+<form class="form_create">
+    <h1 class="title_form">Cadastro de produtos</h1>
+    <div class="container_form">
+        <div>
+            <div class="group_label">
+                <label class="label_form" for="description">
+                    <p class="title_label">Descrição</p>
+                    <input class="input_label" placeholder="Produto" type="text" name="description" id="description">
+                </label>
+
+                <label class="label_form" for="value">
+                    <p class="title_label">Valor</p>
+                    <input class="input_label" placeholder="R$ 0" type="text" name="description" id="description">
+                </label>
+            </div>
+
+            <div class="group_label">
+                <label class="label_form" for="weigth">
+                    <p class="title_label">Peso</p>
+                    <input class="input_label" placeholder="Peso" type="text" name="weigth" id="weigth">
+                </label>
+                <label class="label_form" for="heigth">
+                    <p class="title_label">Altura</p>
+                    <input class="input_label" placeholder="Altura" type="text" name="heigth" id="heigth">
+                </label>
+            </div>
+            <div class="group_label">
+                <label class="label_area" for="completed_label">
+                    <p class="title_label">Descrição completa</p>
+                    <textarea placeholder="Descrição completa do produto..." class="text_area" name="completed_label" id="completed_label" cols="30" rows="10"></textarea>
+                </label>
+            </div>
+        </div>
+
+        <div>
+            <div class="group_label">
+                <label class="label_form" for="category">
+                    <p class="title_label">Categoria</p>
+                    <input class="input_label" placeholder="Categoria" type="text" name="category" id="category">
+                </label>
+                <label class="label_form" for="group">
+                    <p class="title_label">Grupo</p>
+                    <input class="input_label" placeholder="Grupo" type="text" name="group" id="group">
+                </label>
+            </div>
+
+            <div class="group_label">
+                <label class="label_form" for="category">
+                    <p class="title_label">Quantidade</p>
+                    <input class="input_label" placeholder="Quantidade" type="text" name="quanty" id="quanty">
+                </label>
+                <label class="label_form" for="brand">
+                    <p class="title_label">Marca</p>
+                    <input class="input_label" placeholder="Marca" type="text" name="brand" id="brand">
+                </label>
+            </div>
+
+           <div class="container_file">
+                <span class="title_label">Imagem</span>
+                <div class="label_file">
+                    <label class="btn_file" for="image">
+                        <div>
+                            <span class="material-symbols-outlined">cloud_download</span>
+                            Arraste e solte sua foto aqui
+                        </div>
+                        <p>Ou</p>
+                        <p class="btn_select_file">Selecione a foto</p>
+                    </label>
+                    <input type="file" name="image" id="image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn_create">Cadastrar</button>
+</form>

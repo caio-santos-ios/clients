@@ -1,0 +1,36 @@
+<app-header-filter title="Tabela de produtos"></app-header-filter>
+<div class="container_table">
+    <li class="header_table">
+        <p>Produto</p>
+        <p>Valor</p>
+        <p>Peso</p>
+        <p>Altura</p>
+        <p>Descrição completa</p>
+        <p>Grupo</p>
+        <p>Categoria</p>
+        <div class="div">Imagem</div>
+    </li>
+    <ul class="table">
+        <li class="body_table" *ngFor="let product of products">
+            <p>{{ product.description }}</p>
+            <p>{{ product.value.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}) }}</p>
+            <p>{{ product.weigth }}g</p>
+            <p>{{ product.heigth }} cm</p>
+            <p>{{ product.completed_description }}</p>
+            <p>{{ product.group }}</p>
+            <p>{{ product.category }}</p>
+            <img class="image" src="../../../../../assets/foto-produto.png" alt="foto do produto"> 
+        </li>
+    </ul>
+    <div class="container_btn">
+        <button (click)="backPage()" type="button" class="btn_page">
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+        </button>
+        <p class="currentPage">{{ curretPageNumber + 1 }}</p>
+        de
+        <p class="currentPage">{{ pageNumber }}</p>
+        <button (click)="nextPage()" type="button" class="btn_page">
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </button>
+    </div> 
+</div>

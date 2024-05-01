@@ -1,0 +1,27 @@
+<app-header-filter title="Lista de produtos"></app-header-filter>
+<div class="container_list">
+    <ul class="list_product">
+       <app-card-product 
+       [description]="product.description"
+       [value]="product.value"
+       [heigth]="product.heigth"
+       [weigth]="product.weigth"
+       [completed_description]="product.completed_description"
+       [image]="product.image"
+       [group]="product.group"
+       [category]="product.category"
+       *ngFor="let product of products"
+       ></app-card-product>
+    </ul>
+    <div class="container_btn">
+        <button (click)="backPage()" type="button" class="btn_page">
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+        </button>
+        <p class="currentPage">{{ curretPageNumber + 1 }}</p>
+        de
+        <p class="currentPage">{{ pageNumber }}</p>
+        <button (click)="nextPage()" type="button" class="btn_page">
+            <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </button>
+    </div> 
+</div>
