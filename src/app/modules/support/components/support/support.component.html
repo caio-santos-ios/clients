@@ -1,0 +1,98 @@
+<div style="height: 80%;" class="container m-auto mt-2"> 
+    <header class="text-bg-light row rounded-4 mb-2 justify-content-between align-items-center p-2">
+        <h1 class="fs-4 pt-1 col-lg-4">Chamados</h1>
+        <input class="border border-light-subtle rounded-4 p-2 col-lg-5" placeholder="Busque por clientes..." />
+    </header>
+    <div style="height: 100%;" class="text-bg-light row rounded-4 p-2 ">
+        <table class="table my-2 table-borderless">
+            <thead>
+                <tr class="table-light">
+                    <th >Data</th>
+                    <th >Cliente</th>
+                    <th >Email</th>
+                    <th >Telefone</th>
+                    <th >Categoria</th>
+                    <th >Descrição</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-light">
+                    <td>02/05/2024</td>
+                    <td>João Pedro</td>
+                    <td>joaopedroemail.com</td>
+                    <td>(11) 99999-9999</td>
+                    <td>Compras</td>
+                    <td>Estou com problemas ao finalizar um pedido</td>
+                    <div class="btn-group btn-group-sm">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#viewSupport">
+                            Detalhes 
+                        </button>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="viewSupport" tabindex="-1" aria-labelledby="viewSupportLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="viewSupportLabel">Detalhe do chamado</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-6 mb-3">
+                    <label for="clientName" class="form-label">Cliente</label>
+                    <input value="João Pedro" type="clientName" class="form-control" id="clientName" disabled>
+                </div>
+                
+                <div class="col-6 mb-3">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input value="000.000.000-00" type="cpf" class="form-control" id="cpf" disabled>
+                </div>
+            </div>
+           
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input value="joaopedroemail.com" type="email" class="form-control" id="email" disabled>
+            </div>
+
+            <div class="row">
+                <div class="col-6 mb-3">
+                    <label for="telephone" class="form-label">Telefone</label>
+                    <input value="(99) 9999-9999" type="telephone" class="form-control" id="telephone" disabled>
+                </div>
+
+                <div class="col-6 mb-3">
+                    <label for="cellPhone" class="form-label">Celular</label>
+                    <input value="(99) 99999-9999" type="cellPhone" class="form-control" id="cellPhone" disabled>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-6 mb-3">
+                    <label for="category" class="form-label">Categoria</label>
+                    <input value="compras" type="category" class="form-control" id="category" disabled>
+                </div>
+                
+                <div class="col-6 mb-3">
+                    <label for="date" class="form-label">Data</label>
+                    <input value="02/05/2024" type="text" class="form-control" id="date" disabled>
+                </div>
+            </div>
+            <div class="col-12 mb-3">
+                <label for="description">Decrição completa</label>
+                <textarea class="form-control" placeholder="Leave a comment here" id="description" rows="10" cols="10" disabled>Estou com problemas ao finalizar um pedido de compras. Como devo seguir?</textarea>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-primary">Resolvido</button>
+        </div>
+      </div>
+    </div>
+  </div>

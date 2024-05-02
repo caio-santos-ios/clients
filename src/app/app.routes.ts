@@ -25,6 +25,9 @@ import { ProductListPageComponent } from './modules/product/pages/product-list-p
 import { ProductTablePageComponent } from './modules/product/pages/product-table-page/product-table-page.component';
 import { ProductCreatePageComponent } from './modules/product/pages/product-create-page/product-create-page.component';
 
+// SUPORT
+import { SuportPageComponent } from './modules/support/pages/suport-page/suport-page.component';
+
 export const routes: Routes = [
     { path: "", component: DashboardPageComponent },
     { path: "vendas", component: SalesPageComponent },
@@ -37,5 +40,6 @@ export const routes: Routes = [
     { path: "produtos", component: ProductPageComponent },
     { path: "cadastrar-produtos", component: ProductCreatePageComponent },
     { path: "tabela-produtos", component: ProductTablePageComponent },
-    { path: "lista-produtos", component: ProductListPageComponent }
+    { path: "lista-produtos", component: ProductListPageComponent },
+    { path: "chamados", component: SuportPageComponent }
 ];
